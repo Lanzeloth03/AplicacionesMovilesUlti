@@ -5,7 +5,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
-import pe.edu.upeu.asistenciaupeujcn.data.remote.RestUsuario
+import pe.edu.upeu.asistenciaupeujcn.data.remove.RestUsuario
 import pe.edu.upeu.asistenciaupeujcn.utils.TokenUtils
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

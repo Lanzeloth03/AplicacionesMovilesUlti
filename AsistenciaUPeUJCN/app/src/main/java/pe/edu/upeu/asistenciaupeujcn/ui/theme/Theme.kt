@@ -33,7 +33,6 @@ private val LightColorScheme = lightColorScheme(
     onSurface = Color(0xFF1C1B1F),
     */
 )
-
 enum class ThemeType{RED, PURPLE, GREEN}
 public val LightPurpleColors = lightColorScheme(
     primary = purple_theme_light_primary,
@@ -131,13 +130,12 @@ public val LightRedColors = lightColorScheme(
 public val DarkRedColors = darkColorScheme(
     primary = red_theme_dark_primary,
     onPrimary = red_theme_dark_onPrimary,
-    primaryContainer = red_theme_dark_primaryContainer,onPrimaryContainer =
-    red_theme_dark_onPrimaryContainer,
+    primaryContainer = red_theme_dark_primaryContainer,
+    onPrimaryContainer = red_theme_dark_onPrimaryContainer,
     secondary = red_theme_dark_secondary,
     onSecondary = red_theme_dark_onSecondary,
     secondaryContainer = red_theme_dark_secondaryContainer,
-    onSecondaryContainer =
-    red_theme_dark_onSecondaryContainer,
+    onSecondaryContainer = red_theme_dark_onSecondaryContainer,
     tertiary = red_theme_dark_tertiary,
     onTertiary = red_theme_dark_onTertiary,
     tertiaryContainer = red_theme_dark_tertiaryContainer,
@@ -164,19 +162,15 @@ public val LightGreenColors = lightColorScheme(
     primary = green_theme_light_primary,
     onPrimary = green_theme_light_onPrimary,
     primaryContainer = green_theme_light_primaryContainer,
-    onPrimaryContainer =
-    green_theme_light_onPrimaryContainer,
+    onPrimaryContainer = green_theme_light_onPrimaryContainer,
     secondary = green_theme_light_secondary,
     onSecondary = green_theme_light_onSecondary,
-    secondaryContainer =
-    green_theme_light_secondaryContainer,
-    onSecondaryContainer =
-    green_theme_light_onSecondaryContainer,
+    secondaryContainer = green_theme_light_secondaryContainer,
+    onSecondaryContainer = green_theme_light_onSecondaryContainer,
     tertiary = green_theme_light_tertiary,
     onTertiary = green_theme_light_onTertiary,
     tertiaryContainer = green_theme_light_tertiaryContainer,
-    onTertiaryContainer =
-    green_theme_light_onTertiaryContainer,
+    onTertiaryContainer = green_theme_light_onTertiaryContainer,
     error = green_theme_light_error,
     errorContainer = green_theme_light_errorContainer,
     onError = green_theme_light_onError,
@@ -203,13 +197,11 @@ public val DarkGreenColors = darkColorScheme(
     secondary = green_theme_dark_secondary,
     onSecondary = green_theme_dark_onSecondary,
     secondaryContainer = green_theme_dark_secondaryContainer,
-    onSecondaryContainer =
-    green_theme_dark_onSecondaryContainer,
+    onSecondaryContainer = green_theme_dark_onSecondaryContainer,
     tertiary = green_theme_dark_tertiary,
     onTertiary = green_theme_dark_onTertiary,
     tertiaryContainer = green_theme_dark_tertiaryContainer,
-    onTertiaryContainer =
-    green_theme_dark_onTertiaryContainer,
+    onTertiaryContainer = green_theme_dark_onTertiaryContainer,
     error = green_theme_dark_error,
     errorContainer = green_theme_dark_errorContainer,
     onError = green_theme_dark_onError,
@@ -237,15 +229,15 @@ fun AsistenciaUPeUJCNTheme(
     colorScheme: ColorScheme,
     content: @Composable () -> Unit
 ) {
-    /*val colorScheme = when {
-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-        }
-
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
-    }*/
+//    val colorScheme = when {
+//        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
+//            val context = LocalContext.current
+//            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
+//        }
+//
+//        darkTheme -> DarkColorScheme
+//        else -> LightColorScheme
+//    }
 
     MaterialTheme(
         colorScheme = colorScheme,

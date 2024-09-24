@@ -8,6 +8,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.ShoppingCart
@@ -55,7 +56,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-
             val themeType= remember{ mutableStateOf(ThemeType.RED) }
             val darkThemex= isNight()
             val darkTheme = remember { mutableStateOf(darkThemex) }
@@ -81,14 +81,25 @@ class MainActivity : ComponentActivity() {
                     MainScreen(navController, darkMode = darkTheme,
                         themeType=themeType)
                 }
-                /*Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }*/
+
             }
         }
+    }
+}
+
+@Composable
+fun Greeting(name: String, modifier: Modifier = Modifier) {
+    Text(
+        text = "Hello $name!",
+        modifier = modifier
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview() {
+    AsistenciaUPeUJCNTheme(colorScheme = LightPurpleColors) {
+        Greeting("Android")
     }
 }
 
@@ -143,13 +154,16 @@ fun MainScreen(
                 "Shopping Cart"
             ) {
                 val toast = Toast.makeText(context, "Hola Mundo",
-                    Toast.LENGTH_LONG) // in Activity
-                toast.view!!.getBackground().setColorFilter(Color.CYAN, PorterDuff.Mode.SRC_IN)
+                        Toast.LENGTH_LONG) // in Activity
+                toast.view!!.getBackground().setColorFilter(
+                    Color.CYAN,
+                    PorterDuff.Mode.SRC_IN)
                 toast.show()
             },
-            FabItem(Icons.Filled.Favorite,
-                "Favorite")
-            {/*TODO*/}
+            FabItem(
+                Icons.Filled.Favorite,
+                "Favorite"
+            ) { /*TODO*/ }
         )
         Scaffold(
             topBar = { CustomTopAppBar(
@@ -183,21 +197,4 @@ fun MainScreen(
     }
     Dialog(showDialog = openDialog.value, dismissDialog = {
         openDialog.value = false })
-}
-
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AsistenciaUPeUJCNTheme(colorScheme = LightPurpleColors){
-        Greeting("Android")
-        }
 }

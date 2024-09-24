@@ -25,9 +25,7 @@ fun NavigationHost(
         Destinations.Login.route
     ) {
         composable(Destinations.Login.route){
-            LoginScreen(navigateToHome = {
-
-                navController.navigate(Destinations.Pantalla1.route)})
+            LoginScreen(navigateToHome = { navController.navigate(Destinations.Pantalla1.route)})
         }
         composable(Destinations.Pantalla1.route) {
             Pantalla1(
@@ -40,7 +38,9 @@ fun NavigationHost(
                 defaultValue = "Pantalla 2"
             })
         ) { navBackStackEntry ->
-            var newText = navBackStackEntry.arguments?.getString("newText")
+            var newText =
+
+                navBackStackEntry.arguments?.getString("newText")
             requireNotNull(newText)
             Pantalla2(newText, darkMode)
         }

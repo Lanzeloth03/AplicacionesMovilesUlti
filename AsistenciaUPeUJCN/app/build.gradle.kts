@@ -3,7 +3,6 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt") //Agregado
     id("dagger.hilt.android.plugin") //Agregado
-
 }
 
 android {
@@ -73,7 +72,7 @@ dependencies {
     val nav_version = "2.7.7"
     implementation("androidx.navigation:navigation-compose:$nav_version")
 //Agregados Dagger - Hilt
-    implementation("com.google.dagger:hilt-android:2.52") //old 2.47
+    implementation ("com.google.dagger:hilt-android:2.52") //old 2.47
     kapt ("com.google.dagger:hilt-compiler:2.52") //old 2.47
 //Agregado Dagger - Hilt Compose
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0") //old 1.0.0
@@ -91,5 +90,6 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-moshi:2.9.0")
 //App Compact para detectar modo dia noche
     val appcompat_version = "1.7.0" //old 1.6.1
-    implementation("androidx.appcompat:appcompat:$appcompat_version")//Agregado recien
+    implementation("androidx.appcompat:appcompat:$appcompat_version")//Agrega do recien
+
 }
